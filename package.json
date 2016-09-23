@@ -1,0 +1,27 @@
+{
+  "name": "spriteawesome",
+  "version": "0.1.0",
+  "description": "Make sprite awesome",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --port 3000 --inline --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brezzhnev/spriteawesome.git"
+  },
+  "author": "Artem Brezhnev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brezzhnev/spriteawesome/issues"
+  },
+  "homepage": "https://github.com/brezzhnev/spriteawesome#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.22.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  },
+  "dependencies": {
+    "ts-loader": "^0.8.2"
+  }
+}
