@@ -4,7 +4,7 @@
   "description": "Make sprite awesome",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --port 3000 --inline --quiet --open"
+    "dev": "webpack-dev-server --port 3000 --inline --hot --open"
   },
   "repository": {
     "type": "git",
