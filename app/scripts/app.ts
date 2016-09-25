@@ -1,4 +1,5 @@
 import '../styles/main.scss';
+import { fileLoader } from './components/FileLoader';
 
 /**
  * Main application class
@@ -15,5 +16,7 @@ class App {
 
 let application = new App();
 
+console.log(fileLoader);
+
 // Show greeting for user
-application.showGreeting();
+// application.showGreeting();
