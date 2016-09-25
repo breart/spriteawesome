@@ -1,3 +1,5 @@
+import '../styles/main.scss';
+
 /**
  * Main application class
  * @author Artem Brezhnev
@@ -7,12 +9,7 @@ class App {
 
   constructor() {
 
-    this.body = document.documentElement;
-  }
-
-  showGreeting() {
-
-    this.body.textContent = 'Hey, world!';
+    this.body = document.body;
   }
 }
 
