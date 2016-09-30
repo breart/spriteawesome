@@ -53,6 +53,7 @@ class FileLoader {
 
   /**
    * Validate files
+   * @returns {boolean}
    */
   public validate() {
 
@@ -74,6 +75,7 @@ class FileLoader {
   /**
    * Validate file
    * @param file
+   * @returns {boolean}
    * @private
    */
   private _validateFile(file: File) {
