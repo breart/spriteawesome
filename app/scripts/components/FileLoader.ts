@@ -87,7 +87,7 @@ class FileLoader {
     // Check file size
     if(file.size > this.fileSize) {
 
-      this.error = `File size should not exceed ${this.fileSize} Kb`;
+      this.error = `${file.name}: file size should not exceed ${(this.fileSize / 1024)} Kb`;
 
       return false;
     }
@@ -99,7 +99,7 @@ class FileLoader {
 
       let extensions = this.fileTypes.join(', ');
 
-      this.error = `Only files with these extensions are allowed: ${extensions}`;
+      this.error = `${file.name}: only files with these extensions are allowed: ${extensions}`;
 
       return false;
     }
