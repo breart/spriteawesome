@@ -19,9 +19,14 @@ class FileLoader {
   fileTypes: Array<String>;
 
   /**
-   * Max file size in KB
+   * Max file size in Kb
    */
   _fileSize: number;
+
+  /**
+   * Validation error
+   */
+  error: string;
 
   /**
    * @constructor
@@ -59,15 +64,14 @@ class FileLoader {
 
     for(let i = 0; i < this.files.length; i++) {
 
-      if(!this._validateFile(this.files[i])) {
+      if (!this._validateFile(this.files[i])) {
 
-        console.log('Validation failed');
+        // Show error
+        alert(this.error);
 
         return false;
       }
     }
-
-    console.log('Validate successful');
 
     return true;
   }
@@ -83,17 +87,28 @@ class FileLoader {
     // Check file size
     if(file.size > this.fileSize) {
 
+      this.error = `File size should not exceed ${this.fileSize} Kb`;
+
       return false;
     }
 
     let fileType = /(?:\.([^.]+))?$/.exec(file.name)[1];
 
     // Check file extension
-    return this.fileTypes.indexOf(fileType) !== -1;
+    if(this.fileTypes.indexOf(fileType) === -1) {
+
+      let extensions = this.fileTypes.join(', ');
+
+      this.error = `Only files with these extensions are allowed: ${extensions}`;
+
+      return false;
+    }
+
+    return true;
   }
 
   /**
-   * Set max upload file size in KB
+   * Set max upload file size in Kb
    * @param size
    */
   set fileSize(size: number) {
