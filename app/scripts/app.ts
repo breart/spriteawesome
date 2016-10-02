@@ -1,5 +1,6 @@
 import '../styles/main.scss';
 import { fileLoader } from './components/FileLoader';
+import { Workspace } from './components/Workspace';
 
 /**
  * Main application class
@@ -8,9 +9,13 @@ import { fileLoader } from './components/FileLoader';
 class App {
   body: HTMLElement;
 
+  workspace: Workspace;
+
   constructor() {
 
     this.body = document.body;
+
+    this.workspace = new Workspace();
   }
 }
 
